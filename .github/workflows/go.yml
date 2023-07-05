@@ -29,5 +29,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: wireguard-go-arm64
-        path: ./wireguard-go-arm64
+        name: wireguard-go
+        path: /home/runner/work/wireguard-go
