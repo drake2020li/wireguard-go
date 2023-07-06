@@ -32,4 +32,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: wireguard-go
-        path: /home/runner/work/wireguard-go/wireguard-go/out
+        path: /home/runner/work/wireguard-go/out
