@@ -15,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GOARCH: arm64
-      GOPATH: /home/runner/work/wireguard-go/out
 
     steps:
     - uses: actions/checkout@v3
@@ -25,11 +24,11 @@ jobs:
       with:
         go-version: 1.20.5
 
-    - name: Build
-      run: go build -v -o "wireguard-go"
+    - name: Build WireGuard-Go
+      run: go build -o ./build/wireguard-go ./cmd/wireguard-go
 
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
         name: wireguard-go
-        path: /home/runner/work/wireguard-go/out
+        path: ./build/wireguard-go
